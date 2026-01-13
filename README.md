@@ -98,7 +98,8 @@ Frontend will run on: http://localhost:3000
 
 ## API Documentation
 
-Access the Postman Collection [Postman Collection](https://www.postman.com/supply-meteorologist-35303576/task-mangment/collection/29170236-b89fbb01-0023-4def-bb88-07edb49c3f27/?action=share&creator=0)
+You can explore and test all API endpoints via this Postman Collection.
+ [Postman Collection](https://www.postman.com/supply-meteorologist-35303576/task-mangment/collection/29170236-b89fbb01-0023-4def-bb88-07edb49c3f27/?action=share&creator=0)
  
 
 ## Security Features

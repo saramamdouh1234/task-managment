@@ -104,17 +104,12 @@ You can explore and test all API endpoints via this Postman Collection.
 - CORS enabled for frontend-backend communication
 - Users can only access their own tasks
 
-## Assumptions & Design Decisions
+## Design Decisions
 
 - Database: PostgreSQL 🐘
 - Authentication: JWT tokens with 24-hour expiration 🔑
 - Token Storage: localStorage 💾
+- The project uses a config file with hard-coded values for database settings, but ideally, .env should be used to keep sensitive Data secure and avoid pushing it to Git.
 
-## Testing the Application
 
-1. Open http://localhost:3000
-2. Register a new user
-3. Login → redirected to **Tasks** page
-4. Create, update, delete tasks
-5. Status can be changed via dropdown
 

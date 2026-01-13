@@ -98,7 +98,7 @@ Frontend will run on: http://localhost:3000
 
 ## API Documentation
 
-You can access the Postman Collection directly [here](https://www.postman.co/workspace/My-Workspace~847039f4-9b79-4179-8979-9d998592f6d0/collection/29170236-b89fbb01-0023-4def-bb88-07edb49c3f27?action=share&creator=29170236)
+Access the Postman Collection [Postman Collection](https://api.postman.com/collections/29170236-b89fbb01-0023-4def-bb88-07edb49c3f27?access_key=YOUR_ACCESS_KEY)
 
 ### Authentication Endpoints
 

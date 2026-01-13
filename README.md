@@ -53,7 +53,7 @@ A full-stack task management application built with Node.js, Express, React, Pos
 
 ```bash
 git clone <your-repo-url>
-cd taskmanager
+cd task-managment
 ```
 
 2. **Start the application**

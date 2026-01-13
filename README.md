@@ -38,11 +38,11 @@ A full-stack task management application built with Node.js, Express, React, Pos
 
 **DevOps:**
 - Docker
-- Docker Compose
+
 
 ## Prerequisites
 
-- Docker and Docker Compose installed
+- Docker 
 - Git
 
 ## Quick Start
@@ -52,6 +52,10 @@ A full-stack task management application built with Node.js, Express, React, Pos
 1. **Clone the repository**
 
 ```bash
+git clone git@github.com:saramamdouh1234/task-managment.git
+cd task-managment
+
+instead of 
 git clone <your-repo-url>
 cd task-managment
 ```
@@ -59,54 +63,16 @@ cd task-managment
 2. **Start the application**
 
 ```bash
-docker-compose up --build
+docker-compose -f postgres-docker.yml up --build
 ```
+### Note: 
+- Docker is used only to run the PostgreSQL database.
+- Setting up Docker for the rest of the application is not fully completed yet.
 
 3. **Access the application**
    - Frontend: http://localhost:3000
    - Backend API: http://localhost:5001/api
 
-## Manual Setup (Without Docker)
-
-### Backend Setup
-
-1. Navigate to backend directory:
-
-```bash
-cd backend
-```
-
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-3. Setup PostgreSQL database:
-   - Install PostgreSQL
-   - Create database:
-
-```bash
-createdb task_management
-```
-
-4. Update connection details in `.env` if needed:
-
-```env
-DB_USER=postgres
-DB_PASSWORD=sara_postgres
-DB_NAME=task_management
-DB_HOST=localhost
-DB_PORT=5432
-```
-
-5. Start the server:
-
-```bash
-npm start
-```
-
-Backend will run on: http://localhost:5001
 
 ### Frontend Setup
 
@@ -131,6 +97,8 @@ npm start
 Frontend will run on: http://localhost:3000
 
 ## API Documentation
+
+You can access the Postman Collection directly [here](https://www.postman.co/workspace/My-Workspace~847039f4-9b79-4179-8979-9d998592f6d0/collection/29170236-b89fbb01-0023-4def-bb88-07edb49c3f27?action=share&creator=29170236)
 
 ### Authentication Endpoints
 
@@ -296,32 +264,6 @@ DELETE /api/tasks/:id
 }
 ```
 
-## Project Structure
-
-```
-taskmanagement/
-├── backend/
-│   ├── app.js              # Main server file with all routes
-│   ├── routes/             # Auth & Task routes
-│   ├── models/             # Sequelize models
-│   ├── package.json
-│   └── Dockerfile
-├── frontend/
-│   ├── src/
-│   │   ├── App.js
-│   │   ├── App.css
-│   │   └── index.js
-│   ├── components/
-│   │   ├── Register.js
-│   │   ├── Login.js
-│   │   ├── TaskList.js
-│   │   └── TaskForm.js
-│   ├── package.json
-│   └── Dockerfile
-├── docker-compose.yml
-└── README.md
-```
-
 ## Security Features
 
 - Passwords are hashed using bcrypt
@@ -334,7 +276,6 @@ taskmanagement/
 - Database: PostgreSQL 🐘
 - Authentication: JWT tokens with 24-hour expiration 🔑
 - Task Status: limited to `pending`, `in_progress`, `done` 📊
-- SPA: All views handled in React ⚛️
 - Token Storage: localStorage 💾
 
 ## Testing the Application

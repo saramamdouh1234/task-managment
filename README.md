@@ -63,9 +63,6 @@ cd task-managment
 ```bash
 docker-compose -f postgres-docker.yml up --build
 ```
-### Note: 
-- Docker is used only to run the PostgreSQL database.
-- Setting up Docker for the rest of the application is not fully completed yet.
 
 3. **Access the application**
    - Frontend: http://localhost:3000

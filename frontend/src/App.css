@@ -1,0 +1,119 @@
+/* App.css */
+
+/* الخلفية الأساسية واللون العام */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6f0ff; /* أزرق فاتح */
+  margin: 0;
+  padding: 0;
+}
+
+/* الحاوية العامة */
+.App {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff; /* أبيض خلفية الفورم */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* العناوين */
+h1, h2 {
+  color: #0047b3; /* أزرق غامق */
+}
+
+/* الفورم */
+form input {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #0047b3; /* أزرق غامق */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background-color: #003399; /* أزرق أغمق عند hover */
+}
+
+/* رسالة الخطأ */
+p {
+  color: red;
+}
+
+/* روابط التنقل */
+.nav-link {
+  margin: 10px;
+  color: #0047b3;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.nav-link:hover {
+  color: #003399;
+}
+
+/* Task List Styles */
+.task-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.task-title {
+  flex-grow: 1;
+  font-weight: bold;
+  padding: 5px;
+  text-align: left;
+}
+
+.task-status {
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.task-delete {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.task-delete:hover {
+  background-color: #c82333;
+}

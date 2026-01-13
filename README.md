@@ -44,6 +44,7 @@ A full-stack task management application built with Node.js, Express, React, Pos
 
 - Docker 
 - Git
+- Node js
 
 ## Quick Start
 
@@ -52,11 +53,8 @@ A full-stack task management application built with Node.js, Express, React, Pos
 1. **Clone the repository**
 
 ```bash
-git clone git@github.com:saramamdouh1234/task-managment.git
-cd task-managment
-
 instead of 
-git clone <your-repo-url>
+git clone git@github.com:saramamdouh1234/task-managment.git
 cd task-managment
 ```
 
@@ -114,8 +112,6 @@ You can explore and test all API endpoints via this Postman Collection.
 - Database: PostgreSQL 🐘
 - Authentication: JWT tokens with 24-hour expiration 🔑
 - Token Storage: localStorage 💾
-Maintains login state across page reloads for this Single Page Application (SPA) during development.
-Note: For production, more secure methods like HttpOnly cookies can be used
 
 ## Testing the Application
 
@@ -125,10 +121,3 @@ Note: For production, more secure methods like HttpOnly cookies can be used
 4. Create, update, delete tasks
 5. Status can be changed via dropdown
 
-## Future Enhancements
-
-- 📄 Pagination for tasks
-- 🏷️ Task categories/tags
-- 📧 Email notifications & reminders
-- 🔍 Search and filter tasks
-- 👤 User profile management

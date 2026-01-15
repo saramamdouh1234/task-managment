@@ -14,4 +14,6 @@ COPY . .
 EXPOSE 5001
 
 # Start the application
-CMD ["npm", "start"]
+# CMD ["tail", "-f", "/dev/null"]
+
+CMD ["sh", "./entrypoint.sh"]

@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const db = require('./models'); 
 require('dotenv').config();
 
 const authRoutes = require('./routes/auth');
@@ -18,6 +19,9 @@ app.use('/api/tasks', taskRoutes);
 app.get('/', (req, res) => {
   res.send('Server is running!');
 });
+db.sequelize.sync() 
+  .then(() => console.log("All tables synced!"))
+  .catch(err => console.log(err));
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {

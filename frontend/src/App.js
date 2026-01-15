@@ -23,9 +23,10 @@ function App() {
         <h1>Task Management APP</h1>
         <Routes>
           <Route 
-            path="/register" 
-            element={loggedIn ? <Navigate to="/tasks" /> : <Register />} 
-          />
+        path="/register" 
+        element={!loggedIn ? <Register /> : <Navigate to="/tasks" />}
+       />
+
           <Route 
             path="/login" 
             element={<Login onLogin={() => setLoggedIn(true)} />} 

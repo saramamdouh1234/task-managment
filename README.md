@@ -37,7 +37,7 @@ A full-stack task management application built with Node.js, Express, React, Pos
 - Axios
 
 **DevOps:**
-- Docker
+- Docker & Docker Compose 
 
 
 ## Prerequisites
@@ -61,7 +61,7 @@ cd task-managment
 2. **Start the application**
 
 ```bash
-docker-compose -f postgres-docker.yml up --build
+docker-compose up --build
 ```
 
 3. **Access the application**
@@ -109,7 +109,6 @@ You can explore and test all API endpoints via this Postman Collection.
 - Database: PostgreSQL 🐘
 - Authentication: JWT tokens with 24-hour expiration 🔑
 - Token Storage: localStorage 💾
-- The project uses a config file with hard-coded values for database settings, but ideally, .env should be used to keep sensitive Data secure and avoid pushing it to Git.
-
+- Config values managed via .env and Docker for security and flexibility
 
 

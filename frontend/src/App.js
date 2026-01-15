@@ -12,20 +12,32 @@ function App() {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      api.setAuthToken(token);
-      setLoggedIn(true);
+      api.setAuthToken(token); 
+      setLoggedIn(true);       
     }
   }, []);
 
   return (
     <Router>
       <div className="App">
-        <h1>Task Mangment APP</h1>
+        <h1>Task Management APP</h1>
         <Routes>
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login onLogin={() => setLoggedIn(true)} />} />
-          <Route path="/tasks" element={loggedIn ? <TaskList /> : <Navigate to="/login" />} />
-          <Route path="*" element={<Navigate to={loggedIn ? "/tasks" : "/login"} />} />
+          <Route 
+            path="/register" 
+            element={loggedIn ? <Navigate to="/tasks" /> : <Register />} 
+          />
+          <Route 
+            path="/login" 
+            element={<Login onLogin={() => setLoggedIn(true)} />} 
+          />
+          <Route 
+            path="/tasks" 
+            element={loggedIn ? <TaskList /> : <Navigate to="/login" />} 
+          />
+          <Route 
+            path="*" 
+            element={<Navigate to={loggedIn ? "/tasks" : "/login"} />} 
+          />
         </Routes>
       </div>
     </Router>

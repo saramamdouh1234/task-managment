@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loginUser, setAuthToken } from '../services/api';
 
-function Login() {
+function Login(props) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
@@ -12,7 +12,7 @@ function Login() {
     e.preventDefault();
 
     if (!email || !password) {
-      setMessage('Please enter  email and password');
+      setMessage('Please enter email and password');
       return;
     }
 
@@ -20,9 +20,17 @@ function Login() {
       const res = await loginUser({ email, password });
 
       const token = res.data?.token;
+
       if (token) {
-        localStorage.setItem('token', token);
+
+
         setAuthToken(token);
+
+        if (props.onLogin) {
+          props.onLogin();
+        }
+
+        // Navigate to tasks page
         navigate('/tasks');
       } else {
         setMessage(res.data?.message || 'Login failed');

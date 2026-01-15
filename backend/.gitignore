@@ -1,8 +1,8 @@
+#Node modules
 node_modules/
-*.env
+
+# Env file for backend
+.env
+
+# macOS system files
 .DS_Store
-
-
-
-
-
